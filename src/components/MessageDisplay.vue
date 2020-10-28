@@ -160,7 +160,7 @@
 <style lang="less">
     .quick-chat-container .container-message-display {
         flex: 1;
-        overflow-y: scroll;
+        overflow-y: hidden;
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
