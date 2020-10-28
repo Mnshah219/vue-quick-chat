@@ -5,22 +5,15 @@
                  :style="{'width': profilePictureConfig.styles.width, 'height': profilePictureConfig.styles.height, 'border-radius': profilePictureConfig.styles.borderRadius}">
         </div>
         <div class="message-content">
-            <template v-if="message.type == 'image'">
-                <p class="message-username-image">{{getParticipantById(message.participantId).name}}</p>
-                <div v-if="message.uploaded" class="message-image">
-                    <img class="message-image-display" :src="message.src" alt="" @click="onImageClicked(message)">
-                </div>
-                <div v-else class="message-image">
+            <div class="message-text" :style="{background: colors.message.myself.bg, color: colors.message.myself.text}">
+                    <p class="message-username">{{getParticipantById(message.participantId).name}}</p>
+                    <p v-if="message.type=='text'" ref="message-content">{{message.content}}</p>
+                    <img v-if="message.type=='image' && message.uploaded==true" :src="message.src" alt="" @click="onImageClicked(message)">
+                    <div v-if="message.type=='image' && message.uploaded==false" class="message-image">
                     <img class="message-image-display img-overlay" :src="message.preview" alt="">
                     <div class="img-loading"></div>
+                    </div>
                 </div>
-            </template>
-            <template v-else>
-                <div class="message-text" :style="{background: colors.message.others.bg, color: colors.message.others.text}">
-                    <p class="message-username">{{getParticipantById(message.participantId).name}}</p>
-                    <p ref="message-content">{{message.content}}</p>
-                </div>
-            </template>
             <div class="message-timestamp" :style="{'justify-content': 'baseline'}">
                 <template v-if="timestampConfig.relative">
                     {{message.timestamp.toRelative()}}
