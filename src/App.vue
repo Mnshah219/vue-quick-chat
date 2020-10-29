@@ -26,6 +26,7 @@
                       @onImageClicked="onImageClicked"
                       @onImageSelected="onImageSelected"
                       @onMessageSubmit="onMessageSubmit"
+                      @onMessageClicked="onMessageClicked"
                       @onType="onType"
                       @onClose="onClose('param value')"/>
             </div>
@@ -378,6 +379,9 @@
                  * You can add your code here to do whatever you need with the image clicked. A common situation is to display the image clicked in full screen.
                  */
                 console.log('Image clicked', message.src)
+            },
+            onMessageClicked(message){
+                console.log('Message clicked', message)
             }
         }
     }
