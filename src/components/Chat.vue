@@ -12,7 +12,8 @@
                         :scroll-bottom="scrollBottom"
                         :profile-picture-config="profilePictureConfig"
                         :timestamp-config="timestampConfig"
-                        @onImageClicked="onImageClicked"/>
+                        @onImageClicked="onImageClicked"
+                        @onMessageClicked="onMessageClicked"/>
         <MessageManager :colors="colors"
                         :border-style="borderStyle" :submit-icon-size="submitIconSize"
                         :submit-image-icon-size="submitImageIconSize"
@@ -217,6 +218,9 @@
             },
             onImageClicked: function(message){
                 this.$emit("onImageClicked", message)
+            },
+            onMessageClicked: function(message){
+                this.$emit("onMessageClicked", message)
             },
         },
     }

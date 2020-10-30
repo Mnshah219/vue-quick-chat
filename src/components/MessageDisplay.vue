@@ -10,7 +10,8 @@
                        :link-options="linkOptions.myself"
                        :profile-picture-config="profilePictureConfig"
                        :timestamp-config="timestampConfig"
-                       @onImageClicked="onImageClicked"/>
+                       @onImageClicked="onImageClicked"
+                       @onMessageClicked="onMessageClicked"/>
             <OtherMessage v-else :message="message" :async-mode="asyncMode" 
                           :colors="colors"
                           :link-options="linkOptions.others"
@@ -152,6 +153,9 @@
             },
             onImageClicked(message){
                 this.$emit("onImageClicked", message)
+            },
+            onMessageClicked(message){
+                this.$emit("onMessageClicked", message)
             }
         }
     }
