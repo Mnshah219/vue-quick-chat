@@ -21,9 +21,9 @@
                 <template v-else> 
                     {{message.timestamp.toFormat(timestampConfig.format)}}
                 </template>
-                <CheckIcon v-if="asyncMode && message.uploaded && !message.viewed" :size="14" class="icon-sent"/>
+                <!-- <CheckIcon v-if="asyncMode && message.uploaded && !message.viewed" :size="14" class="icon-sent"/>
                 <CheckAll v-else-if="asyncMode && message.uploaded && message.viewed" :size="14" class="icon-sent viewed"/>
-                <div v-else-if="asyncMode" class="message-loading"></div>
+                <div v-else-if="asyncMode" class="message-loading"></div> -->
             </div>
         </div>
     </div>
