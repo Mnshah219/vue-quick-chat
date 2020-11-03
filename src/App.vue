@@ -1,7 +1,5 @@
 <template>
-    <div id="app">
-        <div class="content">
-            <div class="chat-container">
+    <div id="app" style="height:620px">
                 <Chat v-if="visible"
                       :participants="participants"
                       :myself="myself"
@@ -29,22 +27,6 @@
                       @onMessageClicked="onMessageClicked"
                       @onType="onType"
                       @onClose="onClose('param value')"/>
-            </div>
-            <div class="external-controller">
-                <div class="controller-btn-container">
-                    <button class="btn-message" @click="addMessage">Add menssage</button>
-                    <button class="btn-participant" @click="addParticipant">Add participant</button>
-                    <button class="btn-participant" @click="changeAllProps">Change All Props</button>
-                </div>
-                <div class="message-list">
-                    <ol>
-                        <li v-for="(message, index) in messages" :key="index">
-                            {{message.content}}
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -457,5 +439,9 @@
     .btn-message:hover {
         background: rgb(255, 255, 255);
     }
+
+    /* #app{
+        height: 630px;
+    } */
 
 </style>

@@ -1,4 +1,8 @@
 <template>
+<div> 
+    <div style="background-color:#f7f3f3">
+    <picker v-if="showEmojiPicker" style="margin-left:auto" @select="selectEmoji"/>
+    </div>
     <div class="container-message-manager">
         <div class="message-text-box">
             <div ref="userInput" class="message-input" :placeholder="placeholder"
@@ -12,7 +16,11 @@
             <input ref="inputImage" :accept="acceptImageTypes" type="file" style="display: none;" @input="handleImageChange">
             <ImageIcon :size="submitImageIconSize" :fill-color="colors.submitImageIcon"/>
         </div>
+        <div class="container-send-message icon-send-message">
+           <EmojiIcon @click="showEmojiPicker=!showEmojiPicker" :size="submitImageIconSize" :fill-color="colors.submitImageIcon"/>
+        </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -21,10 +29,14 @@
     import { DateTime } from "luxon";
     import SendIcon from 'vue-material-design-icons/Send';
     import ImageIcon from 'vue-material-design-icons/Image';
+    import EmojiIcon from 'vue-material-design-icons/Emoticon'
+    import {Picker} from 'emoji-mart-vue'
     export default {
         components: {
             SendIcon,
-            ImageIcon
+            ImageIcon,
+            Picker,
+            EmojiIcon
         },
         props: {
             colors: {
@@ -65,7 +77,8 @@
         },
         data() {
             return {
-                textInput: ''
+                textInput: '',
+                showEmojiPicker:false
             }
         },
         computed: {
@@ -123,6 +136,11 @@
                 this.$emit("onImageSelected", {file: files[0], message});
                 //this.onImageSelected(files, message)
                 this.newMessage(message)
+            },
+            selectEmoji(emoji){
+                 console.log(this.textInput)
+                this.$refs.userInput.textContent=this.$refs.userInput.textContent+emoji.native
+                console.log(this.textInput)
             }
         }
     }
@@ -199,5 +217,6 @@
             opacity: 1;
             background: #eee;
         }
+
     }
 </style>
