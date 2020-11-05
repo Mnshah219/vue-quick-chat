@@ -151,21 +151,24 @@ export default {
     },
     updateScrollState({ target: { scrollTop, clientHeight, scrollHeight } }) {
       this.updateScroll = scrollTop + clientHeight >= scrollHeight;
-
-      if (typeof this.loadMoreMessages === "function" && scrollTop < 20) {
+      if (
+        typeof this.loadMoreMessages === "function" &&
+        scrollTop < 20 &&
+        !this.loading
+      ) {
         this.loading = true;
-        this.loadMoreMessages((messages) => {
-          //if (Array.isArray(messages) && messages.length > 0) {
-          /**
-           * this code will be removed before the next release
-           *
-           * this line is commented because the setMessages is already called
-           * when 'this.messages.unshift(...this.toLoad)' is executed at App.vue line 177
-           * it was executing the same function twice, causing unexpected behavior with Luxon date objects
-           */
-          //this.setMessages([...messages, ...this.messages]);
-          //}
-          this.loading = false;
+        let scrollDiv = this.$refs.containerMessageDisplay;
+        let oldHeight = scrollDiv.scrollHeight;
+        let oldScrollTop = scrollDiv.scrollTop;
+        this.loadMoreMessages(() => {
+          this.$nextTick(() => {
+            let newHeight = scrollDiv.scrollHeight;
+            console.log(oldScrollTop, scrollDiv.scrollTop);
+            if (scrollDiv.scrollTop == 0) {
+              scrollDiv.scrollTop = oldScrollTop + (newHeight - oldHeight);
+            }
+            this.loading = false;
+          });
         });
       }
     },
