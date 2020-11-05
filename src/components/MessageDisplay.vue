@@ -152,20 +152,9 @@ export default {
     updateScrollState({ target: { scrollTop, clientHeight, scrollHeight } }) {
       this.updateScroll = scrollTop + clientHeight >= scrollHeight;
 
-      if (
-        typeof this.loadMoreMessages === "function" &&
-        scrollTop < 20 &&
-        !this.isLoading
-      ) {
+      if (typeof this.loadMoreMessages === "function" && scrollTop < 20) {
         this.loading = true;
-        let scrollDiv = this.$refs.containerMessageDisplay;
-        let currentHeight = scrollDiv.scrollHeight;
         this.loadMoreMessages((messages) => {
-          let newHeight = scrollDiv.scrollHeight;
-          let offset = newHeight - currentHeight;
-          if (offset > 0) {
-            scrollDiv.scrollTop = scrollDiv.scrollTop + offset;
-          }
           //if (Array.isArray(messages) && messages.length > 0) {
           /**
            * this code will be removed before the next release

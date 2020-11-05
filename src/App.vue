@@ -210,50 +210,6 @@ export default {
             second: 3,
             millisecond: 123,
           },
-          content: "Hey, John Doe! How are you today?",
-          participantId: 2,
-          timestamp: {
-            year: 2016,
-            month: 3,
-            day: 5,
-            hour: 10,
-            minute: 10,
-            second: 3,
-            millisecond: 123,
-          },
-          content: "Hey, John Doe! How are you today?",
-          participantId: 2,
-          timestamp: {
-            year: 2016,
-            month: 3,
-            day: 5,
-            hour: 10,
-            minute: 10,
-            second: 3,
-            millisecond: 123,
-          },
-          content: "Hey, John Doe! How are you today?",
-          participantId: 2,
-          timestamp: {
-            year: 2016,
-            month: 3,
-            day: 5,
-            hour: 10,
-            minute: 10,
-            second: 3,
-            millisecond: 123,
-          },
-          content: "Hey, John Doe! How are you today?",
-          participantId: 2,
-          timestamp: {
-            year: 2016,
-            month: 3,
-            day: 5,
-            hour: 10,
-            minute: 10,
-            second: 3,
-            millisecond: 123,
-          },
           uploaded: true,
           viewed: true,
         },
@@ -338,9 +294,9 @@ export default {
     },
     loadMoreMessages(resolve) {
       setTimeout(() => {
+        resolve(this.toLoad);
         //Make sure the loaded messages are also added to our local messages copy or they will be lost
         this.messages.unshift(...this.toLoad);
-        resolve();
         this.toLoad = [];
       }, 1000);
     },

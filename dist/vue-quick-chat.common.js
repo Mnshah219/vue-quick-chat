@@ -22177,12 +22177,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var Header = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1333b379-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MessageDisplay.vue?vue&type=template&id=183a8a4a&
-var MessageDisplayvue_type_template_id_183a8a4a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"containerMessageDisplay",staticClass:"container-message-display",style:({ background: _vm.colors.message.messagesDisplay.bg }),on:{"scroll":_vm.updateScrollState}},[(_vm.loading)?_c('div',{staticClass:"loader"},[_c('div',{staticClass:"message-loading"})]):_vm._e(),_vm._l((_vm.messages),function(message,index){return _c('div',{key:index,staticClass:"message-container"},[(message.myself)?_c('MyMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.myself,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked,"onMessageClicked":_vm.onMessageClicked}}):_c('OtherMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.others,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked}})],1)})],2)}
-var MessageDisplayvue_type_template_id_183a8a4a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1333b379-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MessageDisplay.vue?vue&type=template&id=0f7ecb15&
+var MessageDisplayvue_type_template_id_0f7ecb15_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"containerMessageDisplay",staticClass:"container-message-display",style:({ background: _vm.colors.message.messagesDisplay.bg }),on:{"scroll":_vm.updateScrollState}},[(_vm.loading)?_c('div',{staticClass:"loader"},[_c('div',{staticClass:"message-loading"})]):_vm._e(),_vm._l((_vm.messages),function(message,index){return _c('div',{key:index,staticClass:"message-container"},[(message.myself)?_c('MyMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.myself,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked,"onMessageClicked":_vm.onMessageClicked}}):_c('OtherMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.others,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked}})],1)})],2)}
+var MessageDisplayvue_type_template_id_0f7ecb15_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/MessageDisplay.vue?vue&type=template&id=183a8a4a&
+// CONCATENATED MODULE: ./src/components/MessageDisplay.vue?vue&type=template&id=0f7ecb15&
 
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
@@ -22748,17 +22748,10 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
           scrollHeight = _ref$target.scrollHeight;
       this.updateScroll = scrollTop + clientHeight >= scrollHeight;
 
-      if (typeof this.loadMoreMessages === "function" && scrollTop < 20 && !this.isLoading) {
+      if (typeof this.loadMoreMessages === "function" && scrollTop < 20) {
         this.loading = true;
-        var scrollDiv = this.$refs.containerMessageDisplay;
-        var currentHeight = scrollDiv.scrollHeight;
         this.loadMoreMessages(function (messages) {
-          var newHeight = scrollDiv.scrollHeight;
-          var offset = newHeight - currentHeight;
-
-          if (offset > 0) {
-            scrollDiv.scrollTop = scrollDiv.scrollTop + offset;
-          } //if (Array.isArray(messages) && messages.length > 0) {
+          //if (Array.isArray(messages) && messages.length > 0) {
 
           /**
            * this code will be removed before the next release
@@ -22769,8 +22762,6 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
            */
           //this.setMessages([...messages, ...this.messages]);
           //}
-
-
           _this.loading = false;
         });
       }
@@ -22804,8 +22795,8 @@ var MessageDisplayvue_type_style_index_0_lang_less_ = __webpack_require__("81ce"
 
 var MessageDisplay_component = normalizeComponent(
   components_MessageDisplayvue_type_script_lang_js_,
-  MessageDisplayvue_type_template_id_183a8a4a_render,
-  MessageDisplayvue_type_template_id_183a8a4a_staticRenderFns,
+  MessageDisplayvue_type_template_id_0f7ecb15_render,
+  MessageDisplayvue_type_template_id_0f7ecb15_staticRenderFns,
   false,
   null,
   null,
