@@ -22177,12 +22177,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var Header = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1333b379-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MessageDisplay.vue?vue&type=template&id=621b7874&
-var MessageDisplayvue_type_template_id_621b7874_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"containerMessageDisplay",staticClass:"container-message-display",style:({background: _vm.colors.message.messagesDisplay.bg}),on:{"scroll":_vm.updateScrollState}},[(_vm.loading)?_c('div',{staticClass:"loader"},[_c('div',{staticClass:"message-loading"})]):_vm._e(),_vm._l((_vm.messages),function(message,index){return _c('div',{key:index,staticClass:"message-container"},[(message.myself)?_c('MyMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.myself,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked,"onMessageClicked":_vm.onMessageClicked}}):_c('OtherMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.others,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked}})],1)})],2)}
-var MessageDisplayvue_type_template_id_621b7874_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1333b379-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MessageDisplay.vue?vue&type=template&id=183a8a4a&
+var MessageDisplayvue_type_template_id_183a8a4a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"containerMessageDisplay",staticClass:"container-message-display",style:({ background: _vm.colors.message.messagesDisplay.bg }),on:{"scroll":_vm.updateScrollState}},[(_vm.loading)?_c('div',{staticClass:"loader"},[_c('div',{staticClass:"message-loading"})]):_vm._e(),_vm._l((_vm.messages),function(message,index){return _c('div',{key:index,staticClass:"message-container"},[(message.myself)?_c('MyMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.myself,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked,"onMessageClicked":_vm.onMessageClicked}}):_c('OtherMessage',{attrs:{"message":message,"async-mode":_vm.asyncMode,"colors":_vm.colors,"link-options":_vm.linkOptions.others,"profile-picture-config":_vm.profilePictureConfig,"timestamp-config":_vm.timestampConfig},on:{"onImageClicked":_vm.onImageClicked}})],1)})],2)}
+var MessageDisplayvue_type_template_id_183a8a4a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/MessageDisplay.vue?vue&type=template&id=621b7874&
+// CONCATENATED MODULE: ./src/components/MessageDisplay.vue?vue&type=template&id=183a8a4a&
 
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
@@ -22628,6 +22628,22 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -22654,10 +22670,10 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
     },
 
     /* onImageClicked: {
-        type: Function,
-        required: false,
-        default: null
-    }, */
+                type: Function,
+                required: false,
+                default: null
+            }, */
     scrollBottom: {
       type: Object,
       required: true
@@ -22682,10 +22698,10 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
       loading: false
     };
   },
-  computed: MessageDisplayvue_type_script_lang_js_objectSpread({}, Object(vuex_esm["b" /* mapGetters */])(['getParticipantById', 'messages', 'myself'])),
+  computed: MessageDisplayvue_type_script_lang_js_objectSpread({}, Object(vuex_esm["b" /* mapGetters */])(["getParticipantById", "messages", "myself"])),
   mounted: function mounted() {
     this.goToBottom();
-    this.$refs.containerMessageDisplay.dispatchEvent(new CustomEvent('scroll'));
+    this.$refs.containerMessageDisplay.dispatchEvent(new CustomEvent("scroll"));
   },
   updated: function updated() {
     if (this.messages.length && !this.messageCompare(this.messages[this.messages.length - 1], this.lastMessage)) {
@@ -22698,11 +22714,11 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
       }
     }
   },
-  methods: MessageDisplayvue_type_script_lang_js_objectSpread(MessageDisplayvue_type_script_lang_js_objectSpread({}, Object(vuex_esm["c" /* mapMutations */])(['setMessages'])), {}, {
+  methods: MessageDisplayvue_type_script_lang_js_objectSpread(MessageDisplayvue_type_script_lang_js_objectSpread({}, Object(vuex_esm["c" /* mapMutations */])(["setMessages"])), {}, {
     /**
      * This function compare two messages without looking at the uploaded propertie.
      * This function has been implemented to prevent chat scrolling down after changing the message from 'uploaded = false' to 'uploaded = true'.
-     * @param {Object} message1 the first message object 
+     * @param {Object} message1 the first message object
      * @param {Object} message2 the second message object
      * @return {Boolean} true if the messages are equal and false if they are different
      */
@@ -22732,20 +22748,29 @@ function MessageDisplayvue_type_script_lang_js_objectSpread(target) { for (var i
           scrollHeight = _ref$target.scrollHeight;
       this.updateScroll = scrollTop + clientHeight >= scrollHeight;
 
-      if (typeof this.loadMoreMessages === 'function' && scrollTop < 20) {
+      if (typeof this.loadMoreMessages === "function" && scrollTop < 20 && !this.isLoading) {
         this.loading = true;
+        var scrollDiv = this.$refs.containerMessageDisplay;
+        var currentHeight = scrollDiv.scrollHeight;
         this.loadMoreMessages(function (messages) {
-          //if (Array.isArray(messages) && messages.length > 0) {
+          var newHeight = scrollDiv.scrollHeight;
+          var offset = newHeight - currentHeight;
 
-          /** 
+          if (offset > 0) {
+            scrollDiv.scrollTop = scrollDiv.scrollTop + offset;
+          } //if (Array.isArray(messages) && messages.length > 0) {
+
+          /**
            * this code will be removed before the next release
-           * 
+           *
            * this line is commented because the setMessages is already called
            * when 'this.messages.unshift(...this.toLoad)' is executed at App.vue line 177
            * it was executing the same function twice, causing unexpected behavior with Luxon date objects
-          */
+           */
           //this.setMessages([...messages, ...this.messages]);
           //}
+
+
           _this.loading = false;
         });
       }
@@ -22779,8 +22804,8 @@ var MessageDisplayvue_type_style_index_0_lang_less_ = __webpack_require__("81ce"
 
 var MessageDisplay_component = normalizeComponent(
   components_MessageDisplayvue_type_script_lang_js_,
-  MessageDisplayvue_type_template_id_621b7874_render,
-  MessageDisplayvue_type_template_id_621b7874_staticRenderFns,
+  MessageDisplayvue_type_template_id_183a8a4a_render,
+  MessageDisplayvue_type_template_id_183a8a4a_staticRenderFns,
   false,
   null,
   null,
