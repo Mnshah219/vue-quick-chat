@@ -163,10 +163,7 @@ export default {
         this.loadMoreMessages(() => {
           this.$nextTick(() => {
             let newHeight = scrollDiv.scrollHeight;
-            console.log(oldScrollTop, scrollDiv.scrollTop);
-            if (scrollDiv.scrollTop == 0) {
-              scrollDiv.scrollTop = oldScrollTop + (newHeight - oldHeight);
-            }
+            scrollDiv.scrollTop = oldScrollTop + (newHeight - oldHeight);
             this.loading = false;
           });
         });
