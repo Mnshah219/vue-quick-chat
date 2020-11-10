@@ -15,6 +15,7 @@
                     </div>
                 </div>
             <div class="message-timestamp" :style="{'justify-content': 'baseline'}">
+                <template v-if="message.isEdited">(edited)</template>
                 <template v-if="timestampConfig.relative">
                     {{message.timestamp.toRelative()}}
                 </template>
