@@ -79,6 +79,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: true,
         },
         {
           content: "Really?! I don't care! Haha",
@@ -95,6 +96,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Really?! I don't care! Haha",
@@ -111,6 +113,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Jhon Doe! How are you today",
@@ -127,6 +130,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Adam! I'm felling really fine this evening.",
@@ -143,6 +147,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: true,
         },
         {
           content: "Really?! I don't care! Haha www.google.com",
@@ -159,6 +164,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: true,
         },
       ],
       chatTitle: "My chat title",
@@ -213,6 +219,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey2, Nimesh Doe! How are you today?",
@@ -229,6 +236,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey3, Nimesh Doe! How are you today?",
@@ -245,6 +253,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey4, Nimesh Doe! How are you today?",
@@ -261,6 +270,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey5, Nimesh Doe! How are you today?",
@@ -277,6 +287,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey6, Nimesh Doe! How are you today?",
@@ -293,6 +304,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey7, Nimesh Doe! How are you today?",
@@ -309,6 +321,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey8, Nimesh Doe! How are you today?",
@@ -325,6 +338,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey9, Nimesh Doe! How are you today?",
@@ -341,6 +355,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey10, Manit Doe! How are you today?",
@@ -357,6 +372,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey11, Manit Doe! How are you today?",
@@ -373,6 +389,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey12, Manit Doe! How are you today?",
@@ -389,6 +406,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey13, Manit Doe! How are you today?",
@@ -405,6 +423,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey14, Manit Doe! How are you today?",
@@ -421,6 +440,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey15, Manit Doe! How are you today?",
@@ -437,6 +457,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey16, Manit Doe! How are you today?",
@@ -453,6 +474,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey17, Manit Doe! How are you today?",
@@ -469,6 +491,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey18, Manit Doe! How are you today?",
@@ -485,6 +508,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Manit Doe! How are you today?",
@@ -501,6 +525,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Manit Doe! How are you today?",
@@ -517,6 +542,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Manit Doe! How are you today?",
@@ -533,6 +559,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Manit Doe! How are you today?",
@@ -549,6 +576,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Manit Doe! How are you today?",
@@ -565,6 +593,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Manit Doe! How are you today?",
@@ -581,6 +610,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
         {
           content: "Hey, Adam! I'm feeling really fine this evening.",
@@ -597,6 +627,7 @@ export default {
           uploaded: true,
           viewed: true,
           type: "text",
+          isEdited: false,
         },
       ],
       scrollBottom: {
